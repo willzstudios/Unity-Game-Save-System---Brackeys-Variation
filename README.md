@@ -27,7 +27,12 @@ https://www.youtube.com/watch?v=XOjd_qU2Ido&t=270s
   -  creates an instance of BinaryFormatter
   -  we setup the string filepath for the save path including the save file name "saves"
   -  we use System.IO.FileStream to FileMode.Create the file according to the path (path contains path with filename)
+    - PlayerData data = new PlayerData(player), creates a new copy of our serializable class PlayerData, passing through "player" our Player.cs monobehaviour class attached to the gameobject
+      - when PlayerData is instantiated 
+    - 
     - we then use BinaryFormatter.Serialize(stream, data), to serialize our "data" into the "stream" of bytes into the file "saves"
+
+
 
 
 

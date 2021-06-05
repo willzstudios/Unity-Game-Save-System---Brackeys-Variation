@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(this);
+        SaveSystem.SavePlayer(this); //what's the point of passing "this" through to SavePlayer - it's used later to find this.transform.position
     }
     public void LoadPlayer()
     {

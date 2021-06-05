@@ -13,7 +13,7 @@ https://www.youtube.com/watch?v=XOjd_qU2Ido&t=270s
 - Player.cs - has to be attached to a gameobject - you can attach it to a 3d cube, or square sprite for testing
 - Create 2 UI buttons, one for Save, one for Load, and connect the OnClick() to your gameobject, referencing Player.SavePlayer(), and Player.LoadPlayer()
 
-**Running:**
+**Running and Expected Result**
 - hit play in Unity
 - move your gameobject around somewhere through the editor's Scene window
 - click save button (the transform.position of the gameobject is now saved)

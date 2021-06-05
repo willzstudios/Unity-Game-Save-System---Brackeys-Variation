@@ -28,11 +28,16 @@ https://www.youtube.com/watch?v=XOjd_qU2Ido&t=270s
   -  we setup the string filepath for the save path including the save file name "saves"
   -  we use System.IO.FileStream to FileMode.Create the file according to the path (path contains path with filename)
     - PlayerData data = new PlayerData(player), creates a new copy of our serializable class PlayerData, passing through "player" our Player.cs monobehaviour class attached to the gameobject
-      - when PlayerData is instantiated 
-    - 
-    - we then use BinaryFormatter.Serialize(stream, data), to serialize our "data" into the "stream" of bytes into the file "saves"
+      - when PlayerData is instantiated, since it has a "constructor"  (a method that is automatically invoked on class instantiation)
+      - the constructor PlayerData(player player), creates a float array of size 3, and fills it with the Player.transform.position
+      - the PlayerData data, now holds the public float[] position, with transform.position info
+    - we then use BinaryFormatter.Serialize(stream, data), to serialize our "data (float array of size:3)" into the "stream" of bytes into the file "saves"
 
-
+When Loading the data with SaveSystem.LoadPlayer()
+- use FileStream to open the binary file as a "stream" of bytes from its path
+  - once open, PlayerData data = BinaryFormatter.Deserialize(stream) as PlayerData; //deserializing the stream of bytes back into the format of PlayerData.cs
+  - //basically the binary file "stream" of bytes is converted back to PlayerData.cs?
+  - return data;
 
 
 

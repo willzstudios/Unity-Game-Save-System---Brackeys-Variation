@@ -24,8 +24,12 @@ https://www.youtube.com/watch?v=XOjd_qU2Ido&t=270s
 - when you click the save button, the ui button calls Player.SavePlayer()
   -  SaveSystem.SavePlayer(this); //this is passed through as this script will be used as reference to find this.transform.position
 - SavePlayer(Player player)
-  -  creates in instance of BinaryFormatter
--   
+  -  creates an instance of BinaryFormatter
+  -  we setup the string filepath for the save path including the save file name "saves"
+  -  we use System.IO.FileStream to FileMode.Create the file according to the path (path contains path with filename)
+    - we then use BinaryFormatter.Serialize(stream, data), to serialize our "data" into the "stream" of bytes into the file "saves"
+
+
 
 **Variations made from Brackeys video**
 But the code has been fixed according to some of the commenters

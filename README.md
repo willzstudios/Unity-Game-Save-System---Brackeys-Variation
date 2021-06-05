@@ -22,9 +22,9 @@ https://www.youtube.com/watch?v=XOjd_qU2Ido&t=270s
 
 **How does it work**?
 - when you click the save button, the ui button calls Player.SavePlayer()
--   SaveSystem.SavePlayer(this); //this is passed through as this script will be used as reference to find this.transform.position
+  -  SaveSystem.SavePlayer(this); //this is passed through as this script will be used as reference to find this.transform.position
 - SavePlayer(Player player)
--   creates in instance of BinaryFormatter
+  -  creates in instance of BinaryFormatter
 -   
 
 **Variations made from Brackeys video**

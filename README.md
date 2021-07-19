@@ -1,4 +1,4 @@
-# Brackey's Game Save System - with improvements
+# Unity Game Save System - Brackeys Variation - Binary Formatter
 
 **Description:**
 https://www.youtube.com/watch?v=XOjd_qU2Ido&t=270s
@@ -43,7 +43,7 @@ When Loading the data with SaveSystem.LoadPlayer()
 
 **Variations made from Brackeys video**
 But the code has been fixed according to some of the commenters
-- we're using: using(FielStream stream = new FileStream(path, FileMode.Open){}
+- we're using: using(FileStream stream = new FileStream(path, FileMode.Open){}
 - we using Path.Combine to combine paths safely for different Operating Systems
 - don't know how to make helper method to convert from Vector3 to float array, or own struct
 - didn't implement but you can use OnApplicationPause instead of OnApplicationQuit for mobile
